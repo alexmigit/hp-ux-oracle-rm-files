@@ -55,10 +55,10 @@ export rpt_time=`date +%Y_%m_%d_%H%M`
 export EXP_DIR="/exports"
 #. /app/oracle/local/bin/ora11gr2setup
 #. /app/oracle/local/bin/dbasetup
-#MAIL_LIST="migit@dxc.com"
+#MAIL_LIST="<YOUREMAIL>"
 OUTPUT=/app/oracle/UTILS/MAINT/cron_exps_rm/outputs
-#RETURNSENDER="alex@revenuesource.us"
-#RETURNSENDER="alexopsunix@gmail.com"
+#RETURNSENDER="<YOUREMAIL>"
+#RETURNSENDER="<YOUREMAIL>"
 
 ###########################################################################################################
 # Create *.lst output file of /exports files to be removed
@@ -86,7 +86,7 @@ for i in $list
 #fi
 
 ###########################################################################################################
-# Delete files from usrncwods700:/exports directory
+# Delete files from <server>:/exports directory
 ###########################################################################################################
 find /exports ! \( -path "*donotdel*" -o -path "*partion*" \) \
 -type f \( -name "*.dmp" -o -name "*.log" -o -name "*.lst" -o -name "*.buf" -o -name "*.gz" \) -mtime +14 \
